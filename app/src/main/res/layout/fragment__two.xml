@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_two"
+    tools:context=".Fragment_Two">
+
+    <ImageView
+       style="@style/imageview"
+        android:id="@+id/back_arrow"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:id="@+id/alertdialog"
+        android:background="@drawable/border"
+        style="@style/LL_fragment_2">
+
+        <LinearLayout
+           style="@style/LL_2">
+
+            <TextView
+                style="@style/txt1"
+                android:layout_weight="0.3"
+                android:text="@string/emp_name"
+                />
+
+            <TextView
+                style="@style/txt2"
+                android:layout_weight="0.7"
+                android:id="@+id/fragment_emp_name"
+                android:text=""
+              />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LL_2">
+
+            <TextView
+               style="@style/txt1"
+                android:layout_weight="0.3"
+                android:text="@string/emp_mail"
+               />
+
+            <TextView
+               style="@style/txt2"
+                android:layout_weight="0.7"
+                android:id="@+id/fragment_emp_mail"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+           style="@style/LL_2">
+
+            <TextView
+                style="@style/txt1"
+                android:layout_weight="0.3"
+                android:text="@string/emp_address"
+                />
+
+            <TextView
+               style="@style/txt2"
+                android:layout_weight="0.7"
+                android:id="@+id/fragment_emp_address"
+                android:text=""
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LL_2">
+
+            <TextView
+
+                style="@style/txt1"
+                android:layout_weight="0.3"
+                android:text="@string/emp_mobile"
+                 />
+
+            <TextView
+               style="@style/txt2"
+                android:layout_weight="0.7"
+                android:id="@+id/fragment_emp_mobilr"
+                android:text=""
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LL_2">
+
+
+        <TextView
+
+            style="@style/txt1"
+            android:layout_weight="0.3"
+            android:text="@string/emp_desg"
+               />
+
+            <TextView
+              style="@style/txt2"
+                android:layout_weight="0.7"
+                android:text=""
+                android:id="@+id/fragment_emp_designation"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

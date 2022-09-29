@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+      style="@style/RR_Layout"
+        android:background="@drawable/border"
+        android:id="@+id/relative_layout">
+
+        <TextView
+            android:id="@+id/custom_name"
+            style="@style/txt1_CD"
+            android:text="@string/name"
+            />
+
+        <TextView
+            android:id="@+id/custom_MailId"
+            android:text="@string/mail"
+           style="@style/txt2_CD" />
+
+        <ImageView
+            android:id="@+id/next_arrow"
+            style="@style/img_CD"
+            android:background="@drawable/ic_baseline_arrow_right_24"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,19 +30,13 @@ import java.util.List;
 public class Fragment_Two extends Fragment {
 
     ImageView back;
-    AlertDialog alertDialog;
     TextView tempname, tempmail, tempmobile, taddress, tedesignation;
     LinearLayout linearLayout;
-
-
-
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment__two, container, false);
 
@@ -82,57 +75,28 @@ public class Fragment_Two extends Fragment {
 
 
 
-
         //clicking linear layout to showing the fragment dialog
        linearLayout = root.findViewById(R.id.alertdialog);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Bundle bundle=new Bundle();
+                bundle.putString("key", data);
+                bundle.putString("key1", data1);
+
                 FragmentManager manager=getFragmentManager();
                 DialogFragment dialogFragment=new com.firstapp.fragment_task_alerdialog.DialogFragment();
+                dialogFragment.setArguments(bundle);
                 dialogFragment.setCancelable(false);
                 dialogFragment.show(manager,"dialogFragment");
 
-              /*  AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                View root = getLayoutInflater().inflate(R.layout.custom_alertdialog, null);
-                TextView alertname=root.findViewById(R.id.AlertName);
-                TextView alertmail=root.findViewById(R.id.AlertMail);
-
-                alertname.setText(data);
-                alertmail.setText(data1);
-
-                builder.setView(root);
-                builder.setCancelable(false);
-
-                Button cancel = root.findViewById(R.id.cancel);
-                Button ok = root.findViewById(R.id.ok);
-
-                cancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Toast.makeText(v.getContext(), "Thank you", Toast.LENGTH_SHORT).show();
-                        alertDialog.dismiss();
-
-                    }
-                });
-                ok.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Toast.makeText(v.getContext(), "Welcome", Toast.LENGTH_SHORT).show();
-                        alertDialog.dismiss();
-                    }
-
-                });
-
-                alertDialog = builder.create();
-                alertDialog.show();
-
-            }*/
             }
         });
+
         return root;
     }
+
 }
 
 
